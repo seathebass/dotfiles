@@ -23,6 +23,8 @@ return {
               languageModel = { "$HOME/.ngram-plug/en/" },
             },
             language = "en-US",
+            logLevel = "severe",
+            checkFrequency = "save",
           },
         },
       },
