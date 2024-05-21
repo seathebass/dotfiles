@@ -10,6 +10,7 @@ return {
         markdown = { "custom_prettier" },
         rust = { "rustfmt" },
         julia = { "juliafmt" },
+        sql = { "sqlfmt" },
       },
       log_level = vim.log.levels.ERROR,
       -- Conform will notify you when a formatter errors
@@ -30,7 +31,7 @@ return {
           command = "juliafmt",
           args = {
             "-e",
-            "using JuliaFormatter; println(format_text(String(read(stdin))))",
+            "using Format; printfmtln(String(read(stdin)))",
           },
           stdin = true,
         },
